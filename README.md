@@ -1,4 +1,4 @@
-# Left off at: 
+# Start at Page 88
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
