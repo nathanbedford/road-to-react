@@ -85,31 +85,33 @@ const Search = ({ value, onChange, children }) =>
 
 const largeColumn = {
   width: '40%',
-  };
-  const midColumn = {
+};
+const midColumn = {
   width: '30%',
-  };
-  const smallColumn = {
+};
+const smallColumn = {
   width: '10%',
-  };
-  
+};
+
+
+
 const Table = ({ list, pattern, onDismiss }) =>
   <div className="table">
     {list.filter(isSearched(pattern)).map(item =>
       <div key={item.objectID} className="table-row">
-        <span style={{ width: '40%' }}>
+        <span style={largeColumn}>
           <a href={item.url}>{item.title}</a>
         </span>
-        <span style={{ width: '30%' }}>
+        <span style={midColumn}>
           {item.author}
         </span>
-        <span style={{ width: '10%' }}>
+        <span style={smallColumn}>
           {item.num_comments}
         </span>
-        <span style={{ width: '10%' }}>
+        <span style={smallColumn}>
           {item.points}
         </span>
-        <span style={{ width: '10%' }}>
+        <span style={smallColumn}>
           <Button
             onClick={() => onDismiss(item.objectID)}
             className="button-inline"
@@ -120,6 +122,7 @@ const Table = ({ list, pattern, onDismiss }) =>
       </div>
     )}
   </div>
+
 
 
 const Button = ({
